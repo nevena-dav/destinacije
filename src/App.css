@@ -91,7 +91,7 @@ a{
 
 /*css za pocetnu stranicu */
 .pocetna{
-  background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-image: url("https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -107,7 +107,7 @@ a{
   transform: translate(-50%, -50%);
   font-weight: bold;
   color: rgb(255, 255, 255);
-  background-color: #c4cfab;
+  background-color: #c804b1;
   padding: 25px;
   opacity: 85%;
   border-radius: 10%;

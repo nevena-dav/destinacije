@@ -8,7 +8,7 @@ function NavBar({pretrazi}) {
                 <ul className="nav__list">
 
                     <li className="nav__item">   <Link to='/'>POCETNA</Link></li>
-                    <li className="nav__item"> <Link to='/'>DESTINACIJE</Link></li>
+                    <li className="nav__item"> <Link to='/destinacije'>DESTINACIJE</Link></li>
                     <li className="nav__item"> <Link to='/'>OMILJENE</Link></li>
                     <li className="nav__item"> 
 
