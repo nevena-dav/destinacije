@@ -9,7 +9,7 @@ function NavBar({pretrazi}) {
 
                     <li className="nav__item">   <Link to='/'>POCETNA</Link></li>
                     <li className="nav__item"> <Link to='/destinacije'>DESTINACIJE</Link></li>
-                    <li className="nav__item"> <Link to='/'>OMILJENE</Link></li>
+                    <li className="nav__item"> <Link to='/omiljene'>OMILJENE</Link></li>
                     <li className="nav__item"> 
 
                         <input type="text" id="kriterijum" placeholder="Search.." name="search" 

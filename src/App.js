@@ -3,114 +3,136 @@ import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Pocetna from './components/Pocetna';
-import Destinacije
- from './components/Destinacije';
- import { useState } from 'react';
+import Destinacije from './components/Destinacije';
+import { useState } from 'react';
+import Omiljene from './components/Omiljene';
+import Pagination from './components/Pagination';
 
 function App() {
-  const[sviRestorani] = useState([
+  const [omiljeneD,setomiljeneD]=useState([]);
+  const[sveDestinacije] = useState([
 
     {
         id:1,
-        naziv:"Toro Latin GastroBar",
-        slika: "https://www.beogradnocu.com/wp-content/uploads/2021/05/toro-restoran-1.jpg",
-        opis:" Restoran Toro Latin GastroBar je kreativna mesavina latinske kulture i ukusa, koji ce vas oboriti sa nogu.",
-        ocena: "4.6",
-        telefon: "011 3034342",
-        adresa:  "Karadjordjeva 2",
+        naziv:"Mjanmar",
+        slika: "https://images.unsplash.com/photo-1490077476659-095159692ab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1451&q=80",
+        opis:"Mjanmar je zadivljujuća destinacija za putovanja, sa raznolikom kulturnom ponudom, slikovitim pejzažima i toplim gostoprimstvom.",
+        cena: "6 noćenja - 700€ po osobi",
         omiljeni: 0
 
     },
     {
       id:2,
-      naziv:"Buena Vida",
-      slika: "https://uploads-ssl.webflow.com/61cf014bfba51e62fad747d1/61cf014bfba51e5664d74844_IMG_2358.jpg",
-      opis:"Buena Vida restoran nudi veliku ponudu malih tanjira sa autenticnim ukusom meksicke hrane.",
-      ocena: "4.5",
-      telefon: "060 4660036",
-      adresa:  "Bulevar Milutina Milankovica 1i",
-      omiljeni: 0
+      naziv:"Bali",
+        slika: "https://images.unsplash.com/photo-1547291195-54d2471ae3b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        opis:"Bali je prelepa i raznolika destinacija za putovanja sa zadivljujućim plažama, živopisnom kulturom i bujnim pejzažima.",
+        cena: "9 noćenja - 1100€ po osobi",
+        omiljeni: 0
 
     },
     {
       id:3,
-      naziv:"Lavash",
-      slika: "https://www.restoranibeograd.com/storage/restaurant/interior/154/restoran_lavash_beton_hala_2.jpg",
-      opis:"Lavash donosi meni sa destinacija Balkana i Bliskog Istoka punog ukusa i ambijent koji vas izmešta u neki drugi svet.",
-      ocena: "4.4",
-      telefon: "062 562751",
-      adresa:  "Karadjordjeva 4",
-      omiljeni: 0
+      naziv:"Barselona",
+        slika: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        opis:"Barselona je živahna turistička destinacija koja spaja bogatu istoriju i zadivljujuću arhitekturu sa živom kulturnom scenom, odličnom kuhinjom i mediteranskim plažama.",
+        cena: "10 noćenja - 600€ po osobi",
+        omiljeni: 0
 
      },
      {
       id:4,
-      naziv:"Vila Maska",
-      slika: "https://cityguide.rs/wp-content/uploads/2020/07/DSC_0419-scaled.jpg",
-      opis: "Svako ko želi nešto egzotičnije u samom centru grada naći će svoje mesto u Villa Maski koja ne ostavlja ravnodusnim.",
-      ocena: "4.7",
-      telefon: "062 221873",
-      adresa:  "Rankeova 7",
-      omiljeni: 0
+      naziv:"Rio de Žaneiro",
+        slika: "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=926&q=80",
+        opis:"Rio de Žaneiro je poznat po živopisnom karnevalu, prelepim plažama, impresivnim znamenitostima poput Hrista Spasitelja i živoj kulturnoj sceni.",
+        cena: "13 noćenja - 1800€ po osobi",
+        omiljeni: 0
 
      },
      {
       id:5,
-      naziv:"Lorenzo i Kakalamba",
-      slika: "https://lk.rs/uploads/galerija/restoran-mini/restoran-lorenzo-i-kakalamba-11.jpg",
-      opis:"Porodični restoran koji se izdvaja svojom originalnošću i jedinstvenim spojem Firence i Pirota u srcu Beograda.",
-      ocena: "4.6",
-      telefon: "011 3295351",
-      adresa:  "Cvijiceva 110",
-      omiljeni: 0
+      naziv:"Tokio",
+        slika: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=536&q=80",
+        opis:"Tokio neprimetno spaja ultra-modernu tehnologiju, živu pop kulturu i vekovne tradicije, nudeći posetiocima zaista jedinstveno i nezaboravno iskustvo.",
+        cena: "12 noćenja - 2100€ po osobi",
+        omiljeni: 0
 
      },
      {
       id:6,
-      naziv:"Frans",
-      slika: "https://www.restoranibeograd.com/storage/restaurant/interior/64/restoran_frans_15.jpg",
-      opis:"Frans je restoran sa dugom tradicijom i ambijentom koji se izdvaja od svih restorana u gradu.",
-      ocena: "4.7",
-      telefon: "011 2641944",
-      adresa:  "Bulevar Oslobođenja 18a",
-      omiljeni: 0
+      naziv:"Rim",
+        slika: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=796&q=80",
+        opis:"Mjanmar je zadivljujuća destinacija za putovanja, sa raznolikom kulturnom ponudom, slikovitim pejzažima i toplim gostoprimstvom.",
+        cena: "4 noćenja - 250€ po osobi",
+        omiljeni: 0
 
      },
      {
       id:7,
-      naziv:"Rodizio",
-      slika: "https://www.kudaveceras.rs/images/news/1608895014-Dozivite-duh-Brazila-u-originalnom-ambijentu-restorana-Rodizio.jpg",
-      opis:"Rodizio je jedini restoran u Beogradu koji služi brazilski rodizio i najkvalitetnije agnus meso u gradu.",
-      ocena: "4.6",
-      telefon: "011 4500895",
-      adresa:  "Bulevar Milutina Milankovića 11b",
-      omiljeni: 0
+      naziv:"Helsinki",
+        slika: "https://images.unsplash.com/photo-1548188500-ab08449b26d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1464&q=80",
+        opis:"Helsinki može da se pohvali bogatim kulturnim nasleđem, zadivljujućom arhitekturom, prelepim pogledom na obalu i opuštenim nordijskim načinom života..",
+        cena: "6 noćenja - 700€ po osobi",
+        omiljeni: 0
 
      },
      {
       id:8,
-      naziv:"Angry Monk",
-      slika: "https://www.kudaveceras.rs/slike/offers/1614082996-angry-monk-restoran-03.jpg",
-      opis:"Daleko od tipičnog mesta za suši, Angri Monk predlaže japansku i panazijsku hranu punu egzoticnih ukusa.",
-      ocena: "4.6",
-      telefon: "064 6123123",
-      adresa:  "Uzun Mirkova 11",
-      omiljeni: 0
+      naziv:"Santorini",
+        slika: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        opis:"Santorini oduzima dah i očarava posetioce slikovitim selima sa belim kućama, kristalno čistim morem i spektakularnim zalascima sunca.",
+        cena: "10 noćenja - 600€ po osobi",
+        omiljeni: 0
 
      },
 
   ]);
+
+  const [krterijumPretrage,setKriterijumPretrage]=useState("");
+
+  function pretrazi(kriterijum){
+    setKriterijumPretrage(kriterijum);
+  }
+
+  function dodaj(id){
+    for(var i=0;i<sveDestinacije.length;i++){
+      if(sveDestinacije[i].id==id){
+        sveDestinacije[i].omiljeni=1;
+      }
+    }
+    var niz = sveDestinacije.filter((res)=>res.omiljeni==1);
+    setomiljeneD(niz);
+  }
+
+  function izbaci(id){
+    for(var i=0;i<sveDestinacije.length;i++){
+      if(sveDestinacije[i].id==id){
+        sveDestinacije[i].omiljeni=0;
+      }
+    }
+    var niz = sveDestinacije.filter((res)=>res.omiljeni==1);
+    setomiljeneD(niz);
+  }
+
+  const[currentPage, setCurrentPage] = useState(1);
+  const[postsPerPage, setPostsPerPage] = useState(4);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = sveDestinacije.slice(firstPostIndex, lastPostIndex);
+
   return (
     <>
-    <BrowserRouter className="App">
-     <NavBar />
-     <Routes>
+    <BrowserRouter>
+        <NavBar pretrazi={pretrazi}></NavBar>
+        <Routes>
             <Route path="/" element={<Pocetna></Pocetna>}></Route>
-            <Route path="/destinacije" element={<Destinacije></Destinacije>}></Route>
+            <Route path="/destinacije" element={<Destinacije kriterijum={krterijumPretrage} destinacije={currentPosts} dodaj={dodaj} >    
+            </Destinacije>}></Route>
+            <Route path="/omiljene" element={<Omiljene kriterijum={krterijumPretrage}  destinacije={omiljeneD} izbaci={izbaci}></Omiljene>}></Route>
           </Routes>
      </BrowserRouter>
-    
-    <Footer/>
+     <Pagination totalPosts = {sveDestinacije.length} postsPerPage = {postsPerPage} setCurrentPage = {setCurrentPage} /> 
+       <Footer> </Footer>
     </>
   );
 }

@@ -9,7 +9,7 @@ function Pocetna() {
       <br /><br /><br /><br /><br />
       <div className="flex-container">
           <div>
-              <h2>Ko smo mi?:</h2>
+              <h2>Ko smo mi?</h2>
               <p> Naša turistička agencija je posvećena pronalaženju najlepših svetskih destinacija. Nudimo vam nezaboravno iskustvo, bez brige o 
                 planiranju i nalaženju odgovarajućeg smeštaja. Mi smo tu da rešimo sve, vi samo odaberite mesto!  
                 

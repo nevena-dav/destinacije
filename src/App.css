@@ -126,7 +126,7 @@ a{
 
     display: flex;
     flex-wrap: wrap;
-    background-color:#494449;
+    background-color:#eb3aeb;
     opacity: 80%;
     justify-content: space-between;
     margin-left: 15%;
@@ -183,11 +183,11 @@ a{
   }
 
   .card {
-    border: #857F74;
+    border: #c917d9;
     border-style: dashed;
     inline-size: 600px;
     overflow: hidden;
-    background-color: #8E9189;
+    background-color: #d64cf8;
     padding-bottom: 20px;
 
 
@@ -197,12 +197,12 @@ a{
     font-size: 29px;
     text-align: center;
     text-decoration: underline;
-    text-decoration-color: #c4cfab;
+    text-decoration-color: #6ba9ca;
     text-decoration-thickness:5px ;
     color: #fff;
     margin-bottom: -10px;
     margin-top: -7px;
-    background-color: #494449;
+    background-color: #680468;
     padding-bottom: 7px;
 
   }
@@ -219,7 +219,7 @@ a{
 
   /* pozadina */
   .restorani,.omiljeni {
-    background-image: url("https://images.unsplash.com/photo-1484156818044-c040038b0719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-image: url("https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=838&q=80");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -273,13 +273,13 @@ a{
 /* Dugmici i izgled za brojeve stranica restorana - paginaciju */
 
 .btnPaginacija{
-  box-shadow: inset 0 0 0 0 #8E9189;
+  box-shadow: inset 0 0 0 0 #850085;
   transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
   float: left;
   padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
-  background: #857F74;
+  background: #cb15d5;
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -296,6 +296,6 @@ a{
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  background-color: #8E9189;
+  background-color: #550052;
   opacity: 80%;
 }
