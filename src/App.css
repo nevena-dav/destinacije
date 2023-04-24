@@ -1,38 +1,301 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Libre Bodoni', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* css za navigacioni meni */
+.nav {
+  background: #b10d9e; opacity: 0.8;
   color: white;
+	position: sticky;
+  margin: auto !important;
+  flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	top: 0;
+}
+h1 {
+  margin-left: 20px;
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav__item{
+  background: #b10d9e;
+  display: inline-block;
+  margin: 0px 30px;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ /* za hover preko stranica*/
+.nav li:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  display: block;
+  transition: all 0.5s ease;
+  bottom: 25%;
+
+}
+.nav li:hover::after {
+  width: 7%;
+  height: 1px;
+  background-color: #fff;
+} 
+
+/* search deo*/
+.nav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 10px;
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+
+}
+
+.nav input[type=text]:focus {
+  background-color: #c4cfab;
+  border-color: #fff;
+  border: 1px;
+}
+
+/* css za dugme za pretragu */
+.dugmePretraga {
+  box-shadow: inset 0 0 0 0#b10d9e;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #b10d9e;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dugmePretraga:hover{
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #c4cfab;
+}
+::placeholder{
+  color: #fff;
+}
+
+/*css za pocetnu stranicu */
+.pocetna{
+  background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 500px;
+  padding-bottom: 100px;
+
+}
+.pocetna-text {
+  text-align: justify;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: #c4cfab;
+  padding: 25px;
+  opacity: 85%;
+  border-radius: 10%;
+}
+
+.paragrafPocetna{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 40%;
+
+  color: black;
+
+}
+  .flex-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#494449;
+    opacity: 80%;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+
   }
-  to {
-    transform: rotate(360deg);
+  .flex-container > div {
+    color: #fff;
+    width: 35%;
+    margin: 10px;
+    text-align: justify;
+    padding: 50px;
+    background-color: transparent;
   }
+
+  /* css za Footer */
+  .footer-container {
+    background-color:#e97ddc;
+    display: flex;
+    opacity: 80%;
+    justify-content: space-evenly;
+    height: 60px;
+
+  }
+
+  .footer-text {
+    text-align: center;
+
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #c4cfab;
+    opacity: 80%;
+    margin: 8px;
+
+  }
+
+  /* css za kartice restorana*/
+  .row{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+	  justify-content: space-evenly;
+
+  }
+
+
+  .card-img-top{
+    height: 400px;
+    width: 600px;
+
+  }
+
+  .card {
+    border: #857F74;
+    border-style: dashed;
+    inline-size: 600px;
+    overflow: hidden;
+    background-color: #8E9189;
+    padding-bottom: 20px;
+
+
+  }
+
+  .card-title {
+    font-size: 29px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #c4cfab;
+    text-decoration-thickness:5px ;
+    color: #fff;
+    margin-bottom: -10px;
+    margin-top: -7px;
+    background-color: #494449;
+    padding-bottom: 7px;
+
+  }
+
+  .card-text {
+    text-align: justify;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    line-height: 40px;
+
+  }
+
+  /* pozadina */
+  .restorani,.omiljeni {
+    background-image: url("https://images.unsplash.com/photo-1484156818044-c040038b0719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 100px;
+  }
+
+ /*Dugmici dodaj i izbaci*/
+ .btnDodaj {
+  box-shadow: inset 0 0 0 0 #b10d9e;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+  float: left;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #b10d9e;
+  border: none;
+  cursor: pointer;
+   color: #fff;
+   font-size: 18px;
+  }
+
+  .btnDodaj:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #c4cfab;
+  }
+
+  .btnDodaj:focus{
+    background-color: #c4cfab;
+
+  }
+  .btnIzbaci {
+    box-shadow: inset 0 0 0 0 #8E9189;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    float: left;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #857F74;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .btnIzbaci:hover{
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #c4cfab;
+  }
+
+/* Dugmici i izgled za brojeve stranica restorana - paginaciju */
+
+.btnPaginacija{
+  box-shadow: inset 0 0 0 0 #8E9189;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+  float: left;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #857F74;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btnPaginacija:hover{
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #c4cfab;
+}
+
+.paginacija {
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  background-color: #8E9189;
+  opacity: 80%;
 }
