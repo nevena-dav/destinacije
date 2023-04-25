@@ -4,7 +4,7 @@ function Footer() {
 
         <footer className="footer-container"> 
             <div className="footer-text" >
-                Adresa: Kneza Milosa 55
+                Adresa: Nemanjina 34, Beograd
             </div> 
             <div className="footer-text" >
                 Email: travelagency@gmail.com

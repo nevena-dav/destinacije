@@ -1,0 +1,129 @@
+.forma {
+
+    align-items: center;
+    text-align: center;
+    padding:50px;
+    
+}
+
+.kontakt
+{
+    background-image: url('https://img.freepik.com/free-photo/white-cloud-blue-sky_74190-2381.jpg?w=2000');
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+.forma-info
+{
+    text-align: center;
+    width: 70%;
+    height: 600px; 
+    margin: 0 auto; 
+    background: linear-gradient(90deg, rgb(108, 184, 227) 0%, rgb(245, 124, 194) 100%);
+    color: #fff;
+    margin-top: 200px;
+    margin: 100px auto;
+    width: 1000px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 10px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+    
+}
+
+.h2send
+{
+    margin-bottom: 20px;
+    
+}
+
+textarea {
+    resize: none;
+    
+  }
+
+.forma-levo
+{
+    background: linear-gradient(
+    90deg,
+    rgb(182, 18, 228) 0%,
+    rgb(11, 53, 158) 100%
+  );
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  
+}
+
+.forma-desno
+{
+    border-radius: 0 10px 10px 0;
+  position: relative;
+  background: linear-gradient(90deg, rgb(23, 40, 223) 100%, rgb(229, 68, 148) 0%,);
+}
+
+
+.slika-levo
+{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.forma{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma-input
+{
+    margin-bottom: 0.5rem;
+    
+    display: block;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 100%;
+    border: none;
+}
+
+.forma-input::placeholder {
+    color: #020071a2;
+    font-size: 13px;
+  }
+
+.forma-input-textarea::placeholder{
+    color: #4b004b7e;
+    font-size: 16px;
+  
+}
+
+
+.forma-label {
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #fff;
+  }

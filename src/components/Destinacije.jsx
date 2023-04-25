@@ -1,6 +1,8 @@
 import Destinacija from "./Destinacija";
 
+
   function Destinacije({destinacije, kriterijum, dodaj}) {
+   
     return (
       <div className="destinacije">
     <div className="row">
@@ -14,6 +16,7 @@ import Destinacija from "./Destinacija";
         </>
         } 
     </div>
+   
     </div>
         );
 

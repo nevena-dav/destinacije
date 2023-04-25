@@ -1,9 +1,23 @@
+import { Button } from './Button';
+import { Link } from 'react-router-dom';
+import Kontakt from './Kontakt';
 function Pocetna() {
     return (
       <div  className='pocetna'>
 
       <div className="pocetna-text">
-          <h1  > Pogledajte najlepše svetske destinacije.</h1>
+          <h1  > Putujte na najlepše destinacije sa nama ! <br /> Budite među prvima koji će dobiti nove ponude! 
+          <br /><br />
+          <Link to='/kontakt'>
+        <Button
+          className='btns'
+          buttonStyle='btn--primary'
+          buttonSize='btn--medium'
+        >
+          SUBSCRIBE
+        </Button>
+        </Link>
+        </h1> 
       </div>
 
       <br /><br /><br /><br /><br />

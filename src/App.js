@@ -7,6 +7,7 @@ import Destinacije from './components/Destinacije';
 import { useState } from 'react';
 import Omiljene from './components/Omiljene';
 import Pagination from './components/Pagination';
+import Kontakt from './components/Kontakt';
 
 function App() {
   const [omiljeneD,setomiljeneD]=useState([]);
@@ -129,9 +130,10 @@ function App() {
             <Route path="/destinacije" element={<Destinacije kriterijum={krterijumPretrage} destinacije={currentPosts} dodaj={dodaj} >    
             </Destinacije>}></Route>
             <Route path="/omiljene" element={<Omiljene kriterijum={krterijumPretrage}  destinacije={omiljeneD} izbaci={izbaci}></Omiljene>}></Route>
+            <Route path="/kontakt" element={<Kontakt></Kontakt>}></Route>
           </Routes>
      </BrowserRouter>
-     <Pagination totalPosts = {sveDestinacije.length} postsPerPage = {postsPerPage} setCurrentPage = {setCurrentPage} /> 
+     <Pagination totalPosts = {sveDestinacije.length} postsPerPage = {postsPerPage} setCurrentPage = {setCurrentPage} />
        <Footer> </Footer>
     </>
   );
